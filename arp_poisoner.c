@@ -17,8 +17,6 @@
 #include <net/ethernet.h>
 
 
-
-
 typedef struct _arp_hdr arp_hdr;
 
 struct _arp_hdr{
@@ -355,14 +353,12 @@ int main(int argc,char **argv){
 
         if((bytes=sendto(sd,ether_frame_target,frame_length,0,(struct sockaddr *)&device,sizeof(device)))<=0){
             perror("sendto() failed");
-            //exit(EXIT_FAILURE);
         }
 
         sleep(2);
 
         if((bytes=sendto(sd1,ether_frame_gateway,frame_length,0,(struct sockaddr *)&device,sizeof(device)))<=0){
             perror("sendto() failed");
-            // exit(EXIT_FAILURE);
         }
 
         sleep(2);
