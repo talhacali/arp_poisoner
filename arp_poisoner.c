@@ -57,7 +57,7 @@ int main(int argc,char **argv){
 
 
     if(argc!=4){
-        fprintf(stderr,"Usage: poisoner interface target_ip_address gateway_address\n");
+        fprintf(stderr,"Usage: arp_poisoner interface target_ip_address gateway_address\n");
         exit(1);
     }
 
